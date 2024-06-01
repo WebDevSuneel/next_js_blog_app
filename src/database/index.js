@@ -9,3 +9,4 @@ const connetToDB= async function(){
 }
 
 export default connetToDB;
+

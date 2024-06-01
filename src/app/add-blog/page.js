@@ -7,7 +7,7 @@ const initialFormData = {
     description: ''
 }
 export default function AddBlog() {
-    const [blogFormData, setBlogFormData] = useState('initialFormData')
+    const [blogFormData, setBlogFormData] = useState('initialFormData') 
     const router=useRouter()
     async function handleAddBlog() {
         const response = await fetch('/api/blog/add-new-blog', {
@@ -19,7 +19,6 @@ export default function AddBlog() {
         })
 
         const result = await response.json()
-        console.log(result);
         if(result?.success){
             setBlogFormData(initialFormData)
             router.push('/blog-list')
@@ -54,7 +53,7 @@ export default function AddBlog() {
                     />
                 </div>
                 <div>
-                    <button onClick={handleAddBlog} className="border border-red-500 bg-black p-4 text-white">Add blog</button>
+                    <button onClick={handleAddBlog}  className="border border-red-500 bg-black p-4 text-white">Add blog</button>
                 </div>
             </div>
         </div>
