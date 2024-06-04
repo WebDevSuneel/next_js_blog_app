@@ -28,6 +28,8 @@ export default function BlogListComponent({ getAllBlogs }) {
                         <button onClick={()=>handleDeleteBlogItem(blogItem._id)} 
                         className="border border-red-500 p-4 bg-black text-white ">
                         Delete Blog Item</button>
+                        <button onClick={()=>router.push(`/blog-list/${blogItem._id}`)} className="border border-red-500 p-4 bg-black text-white ">
+                        View Blog Details</button>
                     </div>
                 ))
             ) : (<h1>NO BLOGS FOUND</h1>)}
